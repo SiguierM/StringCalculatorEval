@@ -14,7 +14,7 @@ namespace StringCalculatorEval
         {
             var part = ",";
             var StringElements = data.Replace(Environment.NewLine, string.Empty).Split(part);
-            return String.Concat(StringElements);
+            return String.Concat(StringElements).Where(nombre =>nombre <= 1000);
 
         }
     }

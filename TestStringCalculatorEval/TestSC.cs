@@ -53,17 +53,19 @@ namespace TestStringCalculatorEval
             Assert.Equal("120", result);
         }
 
+
+
         [Fact]
 
         public void TestIgnorer()
         {
-            // ETANT DONNE une chaîne de nombres où un est supérieur à 1000
+            // ETANT DONNE une chaîne de nombres où un (ou plusieurs) est supérieur à 1000
             const string data = "1, 1009, 1000"; 
 
             // QUAND on appelle Add
             var result = SCalcul.Add(data); 
 
-            // ALORS le nombre est ignoré 
+            // ALORS le(s) nombre(s) supérieur(s) à 1000 est ignoré 
             var dataIgnore = "1, 1000";
             var resultIgnore = SCalcul.Add(dataIgnore); 
 
