@@ -13,9 +13,8 @@ namespace StringCalculatorEval
         {
             var part = data.Split(',');
 
-            var firstNumber = int.Parse(part.First());
-            var secondNumber = int.Parse(part.Last());
-            return firstNumber + secondNumber; 
+            return part.Select(int.Parse).Sum();
+            //return OverflowException;
         }
     }
 }
